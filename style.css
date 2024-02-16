@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.image-generator {
+  background: linear-gradient(135deg, #9d50bb, #6e48aa);
+  color: #fff;
+}
+
+.content {
+  padding: 2rem;
+  background-color: #fc7d1c;
+}
+
+.content h1, .content p {
+  margin-bottom: 1rem;
+}
+
+.generate-form, .image-gallery {
+  padding: 1rem;
+}
+
+.generate-form .generate-btn {
+  background-color: #007bff;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.generate-form .prompt-input, .generate-form .img-quantity {
+  border: 1px solid #ced4da;
+  margin: 0.5rem 0;
+}
+
+.generate-form .controls {
+  flex-wrap: wrap;
+}
+
+.img-card {
+  position: relative; /* Establece referencia para la posición absoluta del icono de descarga */
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.img-card img {
+  width: 100%;
+  height: auto;
+}
+
+.img-card .download-btn {
+  position: absolute; /* Posicionamiento absoluto respecto al .img-card */
+  bottom: 10px; /* Ubicación desde el fondo del contenedor .img-card */
+  left: 10px; /* Ubicación desde la izquierda del contenedor .img-card */
+  width: 32px; /* Tamaño del icono */
+  height: 32px; /* Tamaño del icono */
+  display: flex; /* Centrar el ícono de la flecha dentro del botón */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para visibilidad */
+  border-radius: 50%; /* Hace el botón circular */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+
+.img-card .download-btn img {
+  display: block; /* Asegura que la imagen del icono se muestre correctamente */
+  width: 50%; /* Tamaño del icono respecto al botón */
+  height: auto; /* Mantiene la proporción del icono */
+}
+
+@media (max-width: 768px) {
+  .image-gallery .row {
+    display: block;
+  }
+
+  .img-card {
+    margin-bottom: 1rem;
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .image-gallery .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .img-card {
+    flex-basis: calc(33.333% - 10px);
+    margin: 5px;
+  }
+}
+
+.generate-form .prompt-input, .generate-form .img-quantity {
+  border: 1px solid #ced4da;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1.25rem; /* Aumenta el padding para más visibilidad */
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente para mayor vistosidad */
+  width: auto; /* Asegura que el ancho sea el adecuado */
+  max-width: 100%; /* Asegura que no sobrepase el ancho de su contenedor */
+}
+
+/* Ajustes específicos para el prompt-input para hacerlo más ancho y destacado */
+.generate-form .prompt-input {
+  flex-grow: 1; /* Permite que el input crezca para ocupar espacio disponible */
+  min-width: 0; /* Para flexbox en IE11 */
+}
+
+@media (max-width: 768px) {
+  /* Resto de los media queries... */
+
+  .generate-form {
+    flex-direction: column;
+  }
+
+  .generate-form .prompt-input {
+    width: 90%; /* Hace el input más ancho en móviles */
+    margin-bottom: 1rem; /* Añade espacio debajo del input en móviles */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Resto de los media queries... */
+
+  .generate-form {
+    flex-direction: row;
+  }
+
+  .generate-form .prompt-input {
+    margin-right: 1rem; /* Añade un pequeño margen a la derecha del input */
+  }
+}

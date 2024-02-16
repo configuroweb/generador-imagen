@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Imágenes IA con HTML, CSS y JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./images/faviconconfiguroweb.png" type="image/x-icon">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section class="image-generator py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+          <div class="content">
+            <h1>Herramienta Generadora de Imágenes IA con JavaScript</h1>
+            <p>Convierte tu texto en una imagen en segundos utilizando esta herramienta de generación de imágenes con IA y JavaScript.</p>
+            <form action="#" class="generate-form d-flex flex-column flex-md-row justify-content-center align-items-center">
+              <input class="prompt-input form-control" type="text" placeholder="Describe lo que quieres ver" required>
+              <div class="controls d-flex align-items-center">
+                <select class="img-quantity form-select mx-2">
+                  <option value="1" selected>1 Imagen</option>
+                  <option value="2">2 Imágenes</option>
+                  <option value="3">3 Imágenes</option>
+                </select>
+                <button type="submit" class="generate-btn btn btn-primary">Generar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="image-gallery py-5">
+    <div class="container">
+      <div class="row g-3">
+        <!-- Asegúrate de tener solo tres .img-card para la demostración -->
+        <div class="col-12 col-md-4">
+          <div class="img-card"><img src="images/img-1.jpg" alt="imagen" class="img-fluid"></div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="img-card"><img src="images/img-2.jpg" alt="imagen" class="img-fluid"></div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="img-card"><img src="images/img-3.jpg" alt="imagen" class="img-fluid"></div>
+        </div>
+      </div>
+    </div>
+  </section>  
+</body>
+</html>
